@@ -1,0 +1,22 @@
+[Unit]
+Description=Local GPT account pool adapter (CLIProxyAPI 8.0.72)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/nanshan/workspace/services/gpt-account-pool/app
+ExecStart=/home/nanshan/workspace/tools/cliproxyapi/8.0.72-gateway.2/cli-proxy-api --config /home/nanshan/workspace/services/gpt-account-pool/config/config.yaml --local-model
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=30
+UMask=0077
+MemoryMax=256M
+Nice=5
+NoNewPrivileges=true
+# Upstream errors may contain request material. Portal diagnostics expose only safe fields.
+StandardOutput=null
+StandardError=null
+
+[Install]
+WantedBy=default.target

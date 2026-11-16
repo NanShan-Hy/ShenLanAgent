@@ -1,0 +1,2589 @@
+{
+  "schema": 1,
+  "project": "深蓝智能",
+  "project_id": "deepblue-intelligence",
+  "exported_at_utc": "2026-11-16T15:23:18.406366+00:00",
+  "export_kind": "current_working_tree_snapshot",
+  "modules": [
+    {
+      "name": "ai-gateway",
+      "version": "0.7.0",
+      "source_workspace_path": "projects/ai-gateway",
+      "source_commit": "9d660457a76499814f9ae886a759dd7b76df15b2",
+      "source_branch": "main",
+      "source_dirty": true,
+      "file_count": 96,
+      "bytes": 6151061,
+      "files": [
+        {
+          "path": ".gitignore",
+          "sha256": "6cd1ec63a2422582a3a365270c40e468b6ff2559c96575dbc93ccd36106159ad",
+          "bytes": 637,
+          "mode": "100644"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "4895ced23c5b01209de4f4093c0ab766f9f2203a23e4798443c91e622ef0b3d3",
+          "bytes": 2287,
+          "mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "sha256": "5300f2c4e01f23a97373b72e34d68b0dfb9d3025ead45135dd545e064d7880c2",
+          "bytes": 7659,
+          "mode": "100644"
+        },
+        {
+          "path": "bridge/README.md",
+          "sha256": "e78b9e59224d8d5e3c67e2fdacddc8a1f1bc51dc5ce0dcc56ea35b8c89b4be70",
+          "bytes": 1423,
+          "mode": "100644"
+        },
+        {
+          "path": "bridge/account-binding.patch",
+          "sha256": "e21a7cd4249065dd31550245a3e3dadc5105ff9257200955ef10b7699990c5f9",
+          "bytes": 2994,
+          "mode": "100644"
+        },
+        {
+          "path": "config/settings.example.json",
+          "sha256": "1e97e7e8d4c68d7aeb61fb6cbb27ef655b68386e8b0acecd2f5b0864136db07d",
+          "bytes": 403,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/ai-gateway-proxy.service.example",
+          "sha256": "926ce5ab43667a9b8df27e71fa2d5cbaa1d5ccfc0a246dcd0ca80a16bdf4b367",
+          "bytes": 1094,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/ai-gateway.service",
+          "sha256": "e9ea6def0686d61d513721ae32363f5834e7749144b18623406f42ec1e2e9e97",
+          "bytes": 627,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/nginx-site.conf.template",
+          "sha256": "b9e384462a4f9e5cb667b20b5b66d7a486e7422a7026889c3c58072cd8bacdb4",
+          "bytes": 1525,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/ChatGPT账号池接入.md",
+          "sha256": "adbde3acc9a512e561cda35068dd908f31fec6c1105a9feb7586737a4d280208",
+          "bytes": 302,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/GPT账号池配置指南.md",
+          "sha256": "5b41ee7148a7c2387a3e21f06c97c70e4b9114144a51086a2750b332c0edb390",
+          "bytes": 11644,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/GitHub项目研究.md",
+          "sha256": "c7e37ee78a16bac69feebf6ac541f437d6558e01e66425b89223a405ed776244",
+          "bytes": 4609,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/开发计划书.md",
+          "sha256": "a2e95900dbb1b4c75f529a79d171befdde96b767d43ead2133f1e3bd64f62d35",
+          "bytes": 24927,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/接入与额度.md",
+          "sha256": "4fbcfb133a4e6f4ac7b9bb8edae62d7b2e7c4b42625fae4de1218b062a16f37f",
+          "bytes": 15385,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/系统体检与改进清单.md",
+          "sha256": "59198d7f988617ecd3c43caa878e49424895cb8d901a40d47f11f56e8fb5ea60",
+          "bytes": 5303,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/网页会话与MCP接入.md",
+          "sha256": "a13478d92b04c5be483970864fa2de30bc4b4a9d16bec00bee7bca0b14d4979e",
+          "bytes": 7341,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/运行与维护.md",
+          "sha256": "2cc63aae281d455fda19ca0c08534395d63e0747e78149e8f0ea21f44c57c999",
+          "bytes": 19841,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/验收记录.md",
+          "sha256": "67d0a0b4ec68cfce6c87a73e98bdd11aef37a85a88179a5a0bd9a92c33c444f7",
+          "bytes": 51110,
+          "mode": "100644"
+        },
+        {
+          "path": "examples/codex.config.toml",
+          "sha256": "9b162ecb2d6fc71020f28d06a9d32537dcdeb018f414d069547eeaaf8ff9f476",
+          "bytes": 413,
+          "mode": "100644"
+        },
+        {
+          "path": "examples/managed_chat.py",
+          "sha256": "fdb0d5d37af21691b8487f825fe0eada47a0dec08f2b7110c51d79c28ea09ecd",
+          "bytes": 2429,
+          "mode": "100755"
+        },
+        {
+          "path": "examples/python_client.py",
+          "sha256": "12802d30ba214e48362e078cb43293b1be348b39fb5e9648a51bc4e749b076ae",
+          "bytes": 617,
+          "mode": "100644"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "ffa00d8327d411f69a7c0a561b2f6941b3df3f362701f90ed8cf559b06fd67f2",
+          "bytes": 145,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements.in",
+          "sha256": "acf03e048f5f6522a72c8865233548321ffd4679f7d9f5a8bb7dd6e16b958e07",
+          "bytes": 239,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements.lock",
+          "sha256": "9c01793c265d5e542e3d58d4a41198bec1c5de3cf21c8bb48c2088cb7a49e064",
+          "bytes": 787,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/build_account_pool_adapter.py",
+          "sha256": "8820912b8870602610641c83f61cfb800e71747a648a69c8fcf7ef01fc2234f3",
+          "bytes": 3719,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/deploy.py",
+          "sha256": "d9600c9fb3e959fe9f13be4157ec238e815ea454a8cc573551d20a54e0740ec3",
+          "bytes": 9248,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/manage_account_pool.py",
+          "sha256": "517d0ea4e686a8c21fca11a5265859c9de8da612be7aaf6e3fa71cf901f1a8f1",
+          "bytes": 9107,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/render_https_proxy.py",
+          "sha256": "a77663c5ae06ffa7c54fc26016b1e035477fb1c53d86eb63d8e1ad49bcdd88c3",
+          "bytes": 4232,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/verify_deployment.py",
+          "sha256": "8f6eab503ac793e88ea5ccd45ba609dc6b6a0610ff78b711be106a3315391150",
+          "bytes": 8955,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/__init__.py",
+          "sha256": "d3d868979a2f2fa02b20b248259f8c8ac7273a329ae918da1139ad7602695b67",
+          "bytes": 22,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/account_binding.py",
+          "sha256": "933e6c8456e6a3a83b74027d728ca79c98b5b806bde8eeab33b115bc7cccb6e3",
+          "bytes": 6662,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/account_pool_api.py",
+          "sha256": "60de953f618052f78f009d50a87ad3ea47bed452c8098f8792db01e50dd8ebbc",
+          "bytes": 27148,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/account_pool_backup.py",
+          "sha256": "75f9e67c9b131732abf29f51b8f82df5873e3e6c9ae8e2dcb1282bbe294ba202",
+          "bytes": 3527,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/account_pool_config.py",
+          "sha256": "bbdd1c3ec34b60d7f531fec3f1292ae405468112280e671f33a3486d660f345c",
+          "bytes": 3071,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/admin_api.py",
+          "sha256": "68ab1d49781bae470fe1ed04fbb892047a4daa0a26461dbc8607d2c55d33f3bf",
+          "bytes": 18969,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/app.py",
+          "sha256": "a9dd03f59909d497ae42cfac491e8f0bdd7bc9aee4a1205c3ccb8222e8bece86",
+          "bytes": 30068,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/billing.py",
+          "sha256": "e1c648ee425803d3e3b1ada62b5ef4f65da7ce4cbc7a53ecd7b7e01032d322da",
+          "bytes": 16456,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/cli.py",
+          "sha256": "9ce3dda28e2853a701847b80c68809354fe327e6d64f1394054f78e00ee17e32",
+          "bytes": 10396,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/commerce_api.py",
+          "sha256": "1011efc810b3d3e7327c15b1d331c23fa0a1d4de66e3e5338d53e174e986c2b1",
+          "bytes": 5778,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/conversation_api.py",
+          "sha256": "0249987f353f32e7324b0ce6193fcbab4b2498e71b66f21a3e5f17d0d93bb322",
+          "bytes": 22630,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/conversations.py",
+          "sha256": "82ec7b17848cd149438daa8938c6e6944fc89ebcf360c6579cf0c3c7eda1d026",
+          "bytes": 19278,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/core.py",
+          "sha256": "1c356b06c541b88d1f3545d465f3ee94ac085b7aefbfef7113d8abc4fa7ac89e",
+          "bytes": 14796,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/diagnostics.py",
+          "sha256": "a21c5892e65fcca58dd5212c43ee9fe0d9673350921280eb82f4378c4dba7fb4",
+          "bytes": 13854,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/document_worker.py",
+          "sha256": "e8d93f0311e523124f512e27d36f046af37780f05dc00e554cb97c7c599f6b15",
+          "bytes": 5959,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/files_api.py",
+          "sha256": "07a206d41eb6307f027cb2f71b21aafae6c13d80cdbe4df18978eb4198b24f7b",
+          "bytes": 6988,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/http_pool.py",
+          "sha256": "cee5fea4c1f8b6b3dfd70f92cf76bb9e0add1086eb4c53bcc86c780eafebc48d",
+          "bytes": 1118,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/managed_store.py",
+          "sha256": "f5d100433c496e259e66070e7709a6d199385798151cbb9092d0ef08f134649a",
+          "bytes": 3810,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/media.py",
+          "sha256": "5c2b33c1895371cc65bf3b6212031b5b0e7bbea7ca9b9ef5b1773dc69b4ef445",
+          "bytes": 7468,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/migrations.py",
+          "sha256": "05bc066b2323e810c12249b1dce0524955a900c13c66958ba0000d2d4927875e",
+          "bytes": 12875,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/models.py",
+          "sha256": "29951e5bde4b8c5905b129ea369eff00f6fd693085b084d9740eb227ac348ff1",
+          "bytes": 6649,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/operations.py",
+          "sha256": "1ea7ea788345615dafaac619336392cd74fe4d5cf5900c3a41f61fe736dd790f",
+          "bytes": 9458,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/payments.py",
+          "sha256": "bf99aca71789936875e2a411263e1c3389fe646e22f78f28ace9f538852f1a85",
+          "bytes": 1117,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/relay.py",
+          "sha256": "e193fc0b06eadd59e60b24fd8ac13a74565b62b9a814122bb3c4fb416dd872dd",
+          "bytes": 19002,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/request_audit.py",
+          "sha256": "5d0e08c3df80f09e7f565ab02b1cf764db4399d10f6dc7bd3ec787214229f84e",
+          "bytes": 22886,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/request_audit_api.py",
+          "sha256": "a57feb3e90e692cbd07b4a35aa0c303387bd79f5164e579f919aab0887890b29",
+          "bytes": 12100,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/routing.py",
+          "sha256": "1de383af1eb638d90711fe9f333c952e9e7a581333dceb62809dbf92ea1473eb",
+          "bytes": 22626,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/security.py",
+          "sha256": "3ebcc888504e1d35315895a5405ad67eb56be0913e1b9a36517b24241c4eb99d",
+          "bytes": 3684,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/account-pool-ui.js",
+          "sha256": "b7e0ffe98cdbc68776b51377cbf1b3f365838357e58bd779016e03d43e7643a8",
+          "bytes": 13646,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/app.css",
+          "sha256": "a646d4338d57429bffbc961465d92a4304301c348e2999c555b82247ae298522",
+          "bytes": 15258,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/app.js",
+          "sha256": "861376aa610b91956787edc9727cb0b7574ada655105238dda927736a0d5deae",
+          "bytes": 56693,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/conversation-ui.js",
+          "sha256": "c39dce31390ec14960840e30c86be9d1f52d688873dd9b9194b56180a3a8c43e",
+          "bytes": 10376,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/index.html",
+          "sha256": "b93cd32151fd950e7c5b191259fe6e3cdde0f93857f406057c59087c6babc5fc",
+          "bytes": 473,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/logo.svg",
+          "sha256": "fd9dffe7947f412435eb42d3b9e3685c50946d7345eb4539e5c5c2a4e8eb8fb8",
+          "bytes": 229,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/request-audit-ui.js",
+          "sha256": "9ca136595b027ff44d43b3139f2bb95162a6d91e15fadccc9b19153e5e962d77",
+          "bytes": 12215,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/static/tokens.css",
+          "sha256": "f1063d3f4e86af03b4ce046e82a98a453948bd67edc3119fac2f53ef6ce87851",
+          "bytes": 99,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/token_budget.py",
+          "sha256": "2d693c1015c419b1bfc4917ad6d62ac31b3f54fc4a6b6a6b9b7787c741ac83de",
+          "bytes": 3414,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/token_data/LICENSE.tiktoken",
+          "sha256": "418cb499b436128d653d79941333a5437b7be2ea9213dcc2f04d15d5d2c51d86",
+          "bytes": 1078,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/token_data/README.md",
+          "sha256": "0e9a38def3482c5eeb4a5ef290b4c2e931614c70580bbeb7789401c6204fe2eb",
+          "bytes": 1498,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/token_data/cl100k_base.tiktoken",
+          "sha256": "223921b76ee99bde995b7ff738513eef100fb51d18c93597a113bcffe865b2a7",
+          "bytes": 1681126,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aigateway/token_data/o200k_base.tiktoken",
+          "sha256": "446a9538cb6c348e3516120d7c08b09f57c36495e2acfffe59a5bf8b0cfb1a2d",
+          "bytes": 3613922,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/conftest.py",
+          "sha256": "cd6ae10dd50cc9faf6b7dbeb4ecfc6b1ed17ff9d1250d8c790fe45f6b492a8ea",
+          "bytes": 4023,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/fixtures/codex-lite-model.json",
+          "sha256": "777ce5660b3540d626e9085bc912988fdf27ffe28fcd91a936744e81700d16ac",
+          "bytes": 2793,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/live.py",
+          "sha256": "2866c6debaf44f7cab39ff6b3c77df28ff6c2d48c7bd058e2f6a68cbefd320c8",
+          "bytes": 2131,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_account_pool.py",
+          "sha256": "4fa657e591aecfc95bcbd20ff85079c1f40c27d5f9bb53e58434fb1c2a29b0b0",
+          "bytes": 16679,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_account_pool_backup.py",
+          "sha256": "c04e247782e17945e304dc0626fbd44d8025837e98880419ae0485aaf50985cc",
+          "bytes": 2060,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_account_pool_browser.py",
+          "sha256": "01474f59e460d0da2c6866b5e8aec517cd14ce3ede29bf9b96deed6e48ab7b5e",
+          "bytes": 7841,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_account_pool_clients.py",
+          "sha256": "c346e13d95740648da4d8ead5950fd069d186726a3d157bd0e8de884b7e0348c",
+          "bytes": 13133,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_account_pool_login.py",
+          "sha256": "736211c002272bdb9bc14b5191144cbd24a7274b99205cb6325da72552377539",
+          "bytes": 7667,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_account_pool_process.py",
+          "sha256": "1f2494c723fbd3f49b49811991171e933f2b32777c2c3e473511a3033568e400",
+          "bytes": 5995,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_adapter_deploy.py",
+          "sha256": "a897b88c57c7f32475d588c83057d1d2d0cd3fce1549e0f6e106ec9bf55d72f7",
+          "bytes": 2341,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_browser.py",
+          "sha256": "615e9c83af26cc8d034e3b2e332e05c1f38d176af27352f6de4127b0f25b8c0a",
+          "bytes": 8421,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_clients.py",
+          "sha256": "2280579af3708ad7c96fbe6a60b1c60e5d4f16e7ecf67428964f16258b7efa08",
+          "bytes": 10567,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_connections.py",
+          "sha256": "4cafa4a7e18f2bd8c19eaf8cd0d33caabb8dfdad33bfef4f6ca7d4a2e81dc87d",
+          "bytes": 21100,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_conversation_adapter.py",
+          "sha256": "3c4d9166028196db57b4270c014672a34008d8d75ee91376312deef9eb449cdf",
+          "bytes": 3961,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_conversation_browser.py",
+          "sha256": "10f71291d9ba9e77568f5925f02241c22b99ce712f2e96b1181e41622f224b21",
+          "bytes": 2818,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_conversations.py",
+          "sha256": "29bc6cacaf59e0dc9796ccb0a4ca6aa3626cb407ab7747554ef7c80c7926b977",
+          "bytes": 23929,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_gateway.py",
+          "sha256": "6ef1554b60f87e83356f08cbc13121ecd01c374a89b77405df53df7098581520",
+          "bytes": 15471,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_guardrails.py",
+          "sha256": "da615f33dfc76f811e7bb944d588c1f75c0639b316e1ee1e68a835ef7e9ab6ea",
+          "bytes": 9118,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_https_proxy.py",
+          "sha256": "c20d40dcdcee863a3d765b1a7d66693217b67c3b29f311a353aa4e5963217c38",
+          "bytes": 11071,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_mcp_compat.py",
+          "sha256": "55cdfb2f2f174a902eccda4dab29a16029e8384ebe7fc7ad8d5d2ca079652480",
+          "bytes": 5306,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_quota_diagnostics.py",
+          "sha256": "e3fe4c8ea03e89a937c9bb5973c4f96c4cf0e068c191be8bfe0933e08f60ce42",
+          "bytes": 2782,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_recovery.py",
+          "sha256": "998304acb4bb40f223ae659cca4a27d1c970f7ee1667856f69f3d31bc1eedd11",
+          "bytes": 2240,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_request_audit.py",
+          "sha256": "f555ea201918cb482f3357c3feaebfdb501ce4daf817b1d85d30ef61fa9c55ab",
+          "bytes": 17522,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_request_audit_browser.py",
+          "sha256": "779031a4ad63fe85464a6fd87e26aaaa1a0cb9c20feef73b2f406b655738d046",
+          "bytes": 3809,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_responses_lite.py",
+          "sha256": "a73c367757a44be95c7eaead2fc701ccf84502b50a1459de674dd9e0453d7e03",
+          "bytes": 4613,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_token_budget.py",
+          "sha256": "0547a2828f152389bd0659a2645a9c7c0c6bafa64cdd646aae8e3090fef9d758",
+          "bytes": 6246,
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "name": "ai-workbench",
+      "version": "0.2.0",
+      "source_workspace_path": "projects/ai-workbench",
+      "source_commit": "36a28739b04ad5e3c30e1ba83186c495122bf998",
+      "source_branch": "master",
+      "source_dirty": true,
+      "file_count": 189,
+      "bytes": 1110391,
+      "files": [
+        {
+          "path": ".gitignore",
+          "sha256": "48f8559ad1eaf9560286604952522486fc838d9e7970f50aaa0594f94a193c43",
+          "bytes": 698,
+          "mode": "100644"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "ac15ba2f8217e8910fec9f2669941e918be65e7ae6066ae4a7cc5e8df7105b14",
+          "bytes": 1450,
+          "mode": "100644"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "69931c6afdc1b133034f2a7e5e778bc20b37b50898c9ae308b99f5c398f966bc",
+          "bytes": 1082,
+          "mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "sha256": "3991b487b94e5e7f190b914f22af33979c27c282659c7c17651911390119947e",
+          "bytes": 2863,
+          "mode": "100644"
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "442b620098a5f3abc87c1ed4a5fbf61c4872dcfc91fc8c356d32cb981a54e729",
+          "bytes": 4005,
+          "mode": "100644"
+        },
+        {
+          "path": "config/settings.example.json",
+          "sha256": "33967bf21ed79cf664e6b5271a74b46c1084acaf4fcea7963e0668860b7ff94e",
+          "bytes": 401,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/ai-workbench-worker.service",
+          "sha256": "797c0de745116e918d18d383ae8289d1d35194c0e2db908b2ee6dab5cc1fc8aa",
+          "bytes": 712,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/ai-workbench.service",
+          "sha256": "732769b8cc992a946a2445d68d0bf61d7917f4c0400e82f74d7c8f9d0fe6f81b",
+          "bytes": 726,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/ai-workbench.slice",
+          "sha256": "cc02a68f43eb117d838d48f0898249882712eba1a41a87646dbee7d5e2948160",
+          "bytes": 86,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/PyYAML-6.0.3/pyyaml-6.0.3.dist-info/licenses/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+          "bytes": 1101,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/Pygments-2.21.0/pygments-2.21.0.dist-info/licenses/AUTHORS",
+          "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f",
+          "bytes": 11048,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/Pygments-2.21.0/pygments-2.21.0.dist-info/licenses/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+          "bytes": 1331,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/annotated-doc-0.0.6/annotated_doc-0.0.6.dist-info/licenses/LICENSE",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+          "bytes": 1086,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/annotated-types-0.8.0/annotated_types-0.8.0.dist-info/licenses/LICENSE",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+          "bytes": 1083,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/anyio-4.16.0/anyio-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+          "bytes": 1081,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/certifi-2026.10.23/certifi-2026.10.23.dist-info/licenses/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "bytes": 989,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cffi-2.1.1/cffi-2.1.1.dist-info/licenses/LICENSE",
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+          "bytes": 1123,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/charset-normalizer-3.5.2/charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+          "sha256": "6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887",
+          "bytes": 1071,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/click-8.5.1/click-8.5.1.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "bytes": 1475,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/colorlog-6.12.0/colorlog-6.12.0.dist-info/licenses/LICENSE",
+          "sha256": "b1d9082bc483623fd59fc7279b457f0e40d942a76426cde257239e04dfe4125a",
+          "bytes": 1107,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/croniter-6.2.4/croniter-6.2.4.dist-info/licenses/LICENSE",
+          "sha256": "a8f952e6c6bb30b0cfcf71c304e3931160d2a9b578d6eddfa5cc18c832e17ed3",
+          "bytes": 1064,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cryptography-50.0.2/cryptography-50.0.2.dist-info/licenses/LICENSE",
+          "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+          "bytes": 197,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cryptography-50.0.2/cryptography-50.0.2.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+          "bytes": 11360,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cryptography-50.0.2/cryptography-50.0.2.dist-info/licenses/LICENSE.BSD",
+          "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+          "bytes": 1532,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/defusedxml-0.7.1/defusedxml-0.7.1.dist-info/LICENSE",
+          "sha256": "b80ce9da8c42a1f91079627fbbe2bf27210ae108a0ffe5f077d5b08e076c24c8",
+          "bytes": 2409,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/fastapi-0.163.0/fastapi-0.163.0.dist-info/licenses/LICENSE",
+          "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+          "bytes": 1086,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/fastembed-0.9.1/fastembed-0.9.1.dist-info/licenses/LICENSE",
+          "sha256": "210b508429e913d9de5301f90508bc2cbf5b2281de5b45e607c04d58f0f3bd8f",
+          "bytes": 11351,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/fastembed-0.9.1/fastembed-0.9.1.dist-info/licenses/NOTICE",
+          "sha256": "2949fd29e3bb37cd6ae4adea4eb1244c9a55bec53413771225246f30f0d125e6",
+          "bytes": 943,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/filelock-4.2.10/filelock-4.2.10.dist-info/licenses/LICENSE",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
+          "bytes": 1088,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/fsspec-2026.9.0/fsspec-2026.9.0.dist-info/licenses/LICENSE",
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+          "bytes": 1513,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/h11-0.16.0/h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+          "bytes": 1124,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/hf-xet-1.8.0/hf_xet-1.8.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/httpcore-1.0.9/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+          "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+          "bytes": 1518,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/httpx-0.28.1/httpx-0.28.1.dist-info/licenses/LICENSE.md",
+          "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+          "bytes": 1508,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/huggingface_hub-1.33.0/huggingface_hub-1.33.0.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/idna-3.20/idna-3.20.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "bytes": 1541,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/iniconfig-2.3.1/iniconfig-2.3.1.dist-info/licenses/LICENSE",
+          "sha256": "3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4",
+          "bytes": 1098,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/inventory.json",
+          "sha256": "05b6bc0ba5d67671fb4106fda8fb9da814aaab032a02be060cb81d3705c493fa",
+          "bytes": 18228,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/jmespath-1.1.0/jmespath-1.1.0.dist-info/LICENSE",
+          "sha256": "6eefacfa4d71b82d08408c751470ac8d9854538da2142cb27be0287fb13d0ab9",
+          "bytes": 1113,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/lxml-6.1.3/lxml-6.1.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "8fc2b568133516e46845d2147917adeee1648e70ae9ab5ed6c5417afef4ce855",
+          "bytes": 1507,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/lxml-6.1.3/lxml-6.1.3.dist-info/licenses/LICENSES.txt",
+          "sha256": "388fa99f3bde4447cd5a4cbb114037be026854db6cfe89e112691c1d8abdcf3c",
+          "bytes": 6221,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/mmh3-5.3.1/mmh3-5.3.1.dist-info/licenses/LICENSE",
+          "sha256": "bf3469397307c3081d44d89c1dd72191348d93837ec6f6bd354d6d4ecdcae8e4",
+          "bytes": 1074,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/LICENSE.txt",
+          "sha256": "4860083caa0de2ac3292ca98bd074bd8f45d8b32624e37b1e70a240bff61e488",
+          "bytes": 46794,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+          "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+          "bytes": 1018,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+          "sha256": "3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98",
+          "bytes": 690,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+          "sha256": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af",
+          "bytes": 20785,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+          "sha256": "f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c",
+          "bytes": 1414,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+          "sha256": "211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910",
+          "bytes": 1514,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+          "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9",
+          "bytes": 1543,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+          "sha256": "a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056",
+          "bytes": 1498,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+          "sha256": "a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55",
+          "bytes": 2266,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/ma/LICENSE",
+          "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+          "bytes": 1593,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/random/LICENSE.md",
+          "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+          "bytes": 3511,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+          "sha256": "469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face",
+          "bytes": 2745,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+          "sha256": "0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156",
+          "bytes": 2926,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+          "sha256": "e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918",
+          "bytes": 1154,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+          "sha256": "6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800",
+          "bytes": 1509,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+          "sha256": "9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f",
+          "bytes": 1226,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/numpy-2.5.4/numpy-2.5.4.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+          "sha256": "268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9",
+          "bytes": 332,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/omegaconf-2.4.0/omegaconf-2.4.0.dist-info/licenses/ATTRIBUTION/LICENSE-antlr4",
+          "sha256": "3db1fb3ee79a4b4f9918fc4d0f6133bf18a3cf787f126cd22f8aa9b862281c0c",
+          "bytes": 1480,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/omegaconf-2.4.0/omegaconf-2.4.0.dist-info/licenses/LICENSE",
+          "sha256": "b31375ed5d5cbe7ec2d0c4c14df8afa7a8e5501bbe25f70b6cbc461685f4b91a",
+          "bytes": 1518,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/opencv-python-headless-5.0.0.93/opencv_python_headless-5.0.0.93.dist-info/LICENSE-3RD-PARTY.txt",
+          "sha256": "2537f5653345db7231ff12f307bcfa4c89807d45ed1c4bb8ebfb6f26f61b160a",
+          "bytes": 179634,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/opencv-python-headless-5.0.0.93/opencv_python_headless-5.0.0.93.dist-info/LICENSE.txt",
+          "sha256": "09d719058e782ac7bc71ba21c944e1136cde2bb957c0e888121f0218d6b5f02c",
+          "bytes": 1070,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/opentelemetry-api-1.45.2/opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "bytes": 197,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "bytes": 1344,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pillow-12.3.0/pillow-12.3.0.dist-info/licenses/LICENSE",
+          "sha256": "dda12a98c1979cf3d94df1cff45d27a4cb3f04a60c76f76902ac54cac03ec0ce",
+          "bytes": 70307,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/AUTHORS.txt",
+          "sha256": "f8998e1ed3151771c2fbc899ccf0e18b0817d425dff4983eb0fede4e48db47e4",
+          "bytes": 12239,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+          "bytes": 1093,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+          "bytes": 558,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "bytes": 989,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+          "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+          "bytes": 14531,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+          "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+          "bytes": 11325,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "bytes": 1541,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+          "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+          "bytes": 614,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "bytes": 197,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "bytes": 1344,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+          "bytes": 1023,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+          "bytes": 1089,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+          "bytes": 1331,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+          "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+          "bytes": 1081,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "bytes": 10142,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+          "bytes": 751,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+          "bytes": 1056,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+          "bytes": 1072,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+          "bytes": 1072,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+          "bytes": 1086,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+          "bytes": 1093,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pluggy-1.7.0/pluggy-1.7.0.dist-info/licenses/LICENSE",
+          "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606",
+          "bytes": 1110,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/protobuf-7.36.2/protobuf-7.36.2.dist-info/LICENSE",
+          "sha256": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+          "bytes": 1732,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/py_rust_stemmers-0.1.8/py_rust_stemmers-0.1.8.dist-info/licenses/LICENSE",
+          "sha256": "f79ad92c0936186de30f349d55f5e4162845793661e5f8b4d07e8734a92fed6a",
+          "bytes": 1063,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pyclipper-1.4.0/pyclipper-1.4.0.dist-info/licenses/LICENSE",
+          "sha256": "32ee7398e3123736fd14e9f08287edc2d97ace102ab54d8dc4edc8d31c651fa8",
+          "bytes": 1110,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pycparser-3.12/pycparser-3.12.dist-info/licenses/LICENSE",
+          "sha256": "0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90",
+          "bytes": 1543,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pydantic-2.14.3/pydantic-2.14.3.dist-info/licenses/LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+          "bytes": 1129,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pydantic_core-2.50.4/pydantic_core-2.50.4.dist-info/licenses/LICENSE",
+          "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a",
+          "bytes": 1080,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/SHARED/Apache-2.0.txt",
+          "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+          "bytes": 11360,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/abseil.txt",
+          "sha256": "3ab0ee0d54e7b043f8713da57dc7f716bb348b298ce17f7094b70cb5172c6f81",
+          "bytes": 33,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/agg23.txt",
+          "sha256": "c110d3ea2ad77467ce0dcff7d3337e6c8be8049a5103f4b9bd5fd911a77972e5",
+          "bytes": 725,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/all_except_musl/llvm-libc.txt",
+          "sha256": "e6e818a28a6f1889a0f9510929f832887d027ff8c28e9a6e835c591576859d80",
+          "bytes": 3795,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/android/catapult.txt",
+          "sha256": "f0df289ba9d03d857ad1c2f5918861376b1510b71588ffc60eff5c7a7bfedb09",
+          "bytes": 1483,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/android/cpu_features.txt",
+          "sha256": "7f980508916771e6bd20c2fbae4ac90bc22a5bec844414c4e0972d539c8a5e82",
+          "bytes": 1552,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/android/libunwind.txt",
+          "sha256": "8e0ce4a528f6d0a47e249128df35d432ef862995347f81788d721f813fbf66f4",
+          "bytes": 5361,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/cibw_musl/libgcc_and_libstdc++.txt",
+          "sha256": "b3eeac3d6760b1d49f0f9de1f1004015453d3c5e9671b9ca5b307f2d22cf8bc5",
+          "bytes": 35867,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/dragonbox-Apache2-LLVM.txt",
+          "sha256": "dc2acb202527597ebe9f292d695bd484018193a7dffa39e7648950649ff4fbe6",
+          "bytes": 916,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/dragonbox-Boost.txt",
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+          "bytes": 1338,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/fast_float.txt",
+          "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+          "bytes": 1079,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/freetype.txt",
+          "sha256": "f4b133e25df1f86ad3ffea453aa0e613f0474f34778dbbb3e437e7b2724937d8",
+          "bytes": 6741,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/harfbuzz.txt",
+          "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+          "bytes": 1971,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/highway.txt",
+          "sha256": "a4e3fb11044d78e2a9464e6dd9357834fe35a6ded21157f73a8c370207629630",
+          "bytes": 32,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/icu.txt",
+          "sha256": "17510cf7a58b4879b887ec05a45d72cf1b73544dd9ec7e72f20110ed104229ee",
+          "bytes": 25185,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/lcms.txt",
+          "sha256": "5132b7530ae5acab7058634da86470d3d38bb01d70c2b67ba10c96bc62ced1af",
+          "bytes": 1354,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/libjpeg_turbo.ijg",
+          "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+          "bytes": 12799,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/libjpeg_turbo.md",
+          "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430",
+          "bytes": 5620,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/libopenjpeg.txt",
+          "sha256": "c5ab0890a737c2dfa7ba675036554f6d17741d98629b0c2a145354d00617e6b2",
+          "bytes": 1794,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/libpng.txt",
+          "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b",
+          "bytes": 5345,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/libtiff.txt",
+          "sha256": "92b72ba97e6c2749c2a94bc0ef646b47080217f1e772a482b33cf5a5f98a6506",
+          "bytes": 1139,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/pbin_and_sbuild/brotli.txt",
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+          "bytes": 1084,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/pbin_and_sbuild/libyuv.txt",
+          "sha256": "2b2cc1180c7e6988328ad2033b04b80117419db9c4c584918bbb3cfec7e9364f",
+          "bytes": 1506,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/pbin_musl/musl.txt",
+          "sha256": "b870108ec5e7790e9f9919064f1b9421d62d5f9b0e6c230c6adf7ea2da62e97b",
+          "bytes": 6196,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/pdfium-binaries.txt",
+          "sha256": "18f922f766364a25a6327e7b1b8287d7c36cf8bbea80767d014fb453e2fe4a50",
+          "bytes": 1177,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/pdfium.txt",
+          "sha256": "6aed20af4e54f0213331890ca677eb4a2dcd199ad1f8c8bd35e878e0c91a0233",
+          "bytes": 1568,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/simdutf.txt",
+          "sha256": "fc8dbc04e03ad4efc08a647ffe7f995b811a95bc04c0e85a56d5277c6593fa5f",
+          "bytes": 1059,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/v8_xfa/bigint.txt",
+          "sha256": "32759d1397d8f7b9e15ece146e4038b22b90e93b4935b5a840bcef4d2ba5ea55",
+          "bytes": 3367,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/v8_xfa/fdlibm.txt",
+          "sha256": "e7115e18444dae09d17f361ddc365fb1d342640fe500796209c63f7c80dfae10",
+          "bytes": 250,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/v8_xfa/fp16.txt",
+          "sha256": "c91377adafa2f498211a4fe017788e20c38892124673860f068f2919c289193d",
+          "bytes": 1158,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/v8_xfa/inspector_protocol.txt",
+          "sha256": "450ebb9e9e50c2809d9ca581931fc8946d8d5aa0c8c35aae9ac471342fe4a88e",
+          "bytes": 1537,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/v8_xfa/strongtalk.txt",
+          "sha256": "6a585a9f466654abc8fc0829d56b1bc987e3a073d31faa03bba37d33640a23cd",
+          "bytes": 1482,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/v8_xfa/v8.txt",
+          "sha256": "4af93c12062c58058378de2397dc1c92bbff9ddfb1d583a01c84127557ce97ca",
+          "bytes": 1527,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/BUILD_LICENSES/zlib.txt",
+          "sha256": "02421fcfbfb1d656ef0b6ff4cd3c39f2946f08c3219fa42db482add7ce1f53ea",
+          "bytes": 1328,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/LICENSES/Apache-2.0.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/LICENSES/BSD-3-Clause.txt",
+          "sha256": "a6d11f0694c0137e9b02924b9d33a159f6c72f220fa4655bb2e1ea3654377d39",
+          "bytes": 1459,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pypdfium2-5.15.2/pypdfium2-5.15.2.dist-info/licenses/LICENSES/CC-BY-4.0.txt",
+          "sha256": "419896aea50c15d6e40c5b4baf4bd346f78223b9a354c7357ad00262afdc08ec",
+          "bytes": 14527,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pytest-9.2.0/pytest-9.2.0.dist-info/licenses/LICENSE",
+          "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b",
+          "bytes": 1091,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/python-dateutil-4.0.0/python_dateutil-4.0.0.dist-info/licenses/AUTHORS.md",
+          "sha256": "56004c45a95e9ee5582ea60f9a7ee42179c8594c7b9c245bbfb4a3445b4af640",
+          "bytes": 7031,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/python-dateutil-4.0.0/python_dateutil-4.0.0.dist-info/licenses/LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e",
+          "bytes": 2889,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/python-docx-1.2.0/python_docx-1.2.0.dist-info/licenses/LICENSE",
+          "sha256": "7652f271e46d0d533e9dc463f3b5fcbdcacf4d6a9c8d6b554d15efd0f37f6132",
+          "bytes": 1104,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/python-multipart-0.0.33/python_multipart-0.0.33.dist-info/licenses/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/rapidocr-3.10.0/rapidocr-3.10.0.dist-info/licenses/LICENSE",
+          "sha256": "3e0af25fdd06aa9586ae97adb00ea927ebe5a3805ac77d2d3a81ce5f55693333",
+          "bytes": 11422,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/rapidocr-3.10.0/rapidocr-3.10.0.dist-info/licenses/MODEL_LICENSES.md",
+          "sha256": "c5fd0e8603d3df743355b546121e6fe0f4ef8ff455c5a85c1681fd3ae520e153",
+          "bytes": 8398,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/requests-2.34.2/requests-2.34.2.dist-info/licenses/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "bytes": 10142,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/requests-2.34.2/requests-2.34.2.dist-info/licenses/NOTICE",
+          "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc",
+          "bytes": 38,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/shapely-2.2.0/shapely-2.2.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "4a207eac9bf257ed286e1c6f0fce253d1abfdb134fc61ec855e37f5692a3f754",
+          "bytes": 1583,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/shapely-2.2.0/shapely-2.2.0.dist-info/licenses/LICENSE_GEOS",
+          "sha256": "81d9aaf9ab7e3e6184568a70f27ee3e138d8d1e543b46dad5af88cff61cf1b36",
+          "bytes": 26787,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/six-1.17.0/six-1.17.0.dist-info/LICENSE",
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0",
+          "bytes": 1066,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/starlette-1.10.0/starlette-1.10.0.dist-info/licenses/LICENSE.md",
+          "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf",
+          "bytes": 1518,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/tqdm-4.70.1/tqdm-4.70.1.dist-info/licenses/LICENCE",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de",
+          "bytes": 1985,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/typing-inspection-0.4.5/typing_inspection-0.4.5.dist-info/licenses/LICENSE",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+          "bytes": 1090,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/typing_extensions-4.16.0/typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+          "bytes": 13936,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/tzdata-2026.6/tzdata-2026.6.dist-info/licenses/LICENSE",
+          "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46",
+          "bytes": 625,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/tzdata-2026.6/tzdata-2026.6.dist-info/licenses/licenses/LICENSE_APACHE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/urllib3-2.8.0/urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+          "bytes": 1093,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/uvicorn-0.54.0/uvicorn-0.54.0.dist-info/licenses/LICENSE.md",
+          "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371",
+          "bytes": 1526,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/体系设计.md",
+          "sha256": "2233fa2ff7c49f8821830329ea1c3a48d6706d5a2796da2dad71995c0a465b83",
+          "bytes": 5017,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/开发计划书.md",
+          "sha256": "a47cc9f8f8992df2a137d28afae462762e8c199c17dcde7e03a530fcd7afa0c3",
+          "bytes": 3909,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/运行与维护.md",
+          "sha256": "c532634bb76693febafe4ea1b67d8d405f164d9a569054ac4a0c19c1e3c695a3",
+          "bytes": 6971,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/验收记录.md",
+          "sha256": "c160a8599edffa8977a868fc19a2a41a2b1ab3530c69bb196b3a750e6dd3b975",
+          "bytes": 6561,
+          "mode": "100644"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "2c3b99beee6d18e00db54e8566d22f0a439390ed073663476031cbff573aa305",
+          "bytes": 136,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements-dev.in",
+          "sha256": "0f58202158674c4f05e3229d39c7c13c36f04464a72cb076e879c660b4d85d57",
+          "bytes": 34,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements.in",
+          "sha256": "cfc7482ba6b6e88cef65534908201f8fc92de4f35697f4a3cf44ac96d94a7fa2",
+          "bytes": 272,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements.lock",
+          "sha256": "de484ecd7ea982efea7f89ca715aff242e8c96c583c828000e025921cf2516c2",
+          "bytes": 1092,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/deploy.py",
+          "sha256": "d959a4bebee674237fb1a8cd2778865d8abd55842419ec3d361200945b754596",
+          "bytes": 2813,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/evaluate.py",
+          "sha256": "68ca9a0b9d0a091698a2a22b89aa3fd64963afb5f777fe21dab56673ad753e5b",
+          "bytes": 6864,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/evaluate_ocr.py",
+          "sha256": "94c704905271c925c8c94306dfa59bd9f6c7c564f1b1577a6f62d432021b2833",
+          "bytes": 1883,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/prepare_models.py",
+          "sha256": "ba55152351d465ee248971701f9e7f9f45be38d6907e11054f40feb4ad1c4f17",
+          "bytes": 1139,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/qa_browser.py",
+          "sha256": "cde91af293119f3ecb40cd085cd181acb0287949a86d812540a281d6a590e1d3",
+          "bytes": 5786,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/qa_deployed.py",
+          "sha256": "b5f6e1d42cded3e8a225f7cfe7e8fe8e26374ab6a0f82d8dc6f502236125a16a",
+          "bytes": 3460,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/qa_deployed_browser.py",
+          "sha256": "4f276361da679cf5353bc22dce6251d2a1c82c19964fa985cd7b28bb1c3ffac2",
+          "bytes": 4536,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/__init__.py",
+          "sha256": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41",
+          "bytes": 22,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/access.py",
+          "sha256": "2eea3929e83035588f1a4250808f9e80c7452e22fa8c1edc86ba5744c6f8e5fb",
+          "bytes": 8502,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/app.py",
+          "sha256": "8159c8220ab76ae30294ab641bd1dd11653013fba0664c9b86427167a1bc240b",
+          "bytes": 34958,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/cli.py",
+          "sha256": "5c972b619531723e05b2cb983acd157b21fc7b67712e29c064a13a883b527ad0",
+          "bytes": 7360,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/core.py",
+          "sha256": "3d17056b379377ea7a8b246101d554d9f798b4e7af4f425a20ab2c8781d061cb",
+          "bytes": 11210,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/documents.py",
+          "sha256": "f027c2637e57218815d5c76645cea276e418f55d98ef496cf017432e16d9adf8",
+          "bytes": 5605,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/drafts.py",
+          "sha256": "081b8b229d8db3e33c5e62d7272090e656b07679f6d807bbe70445dd7298ce71",
+          "bytes": 3709,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/integration_store.py",
+          "sha256": "9db5b6215250ca80f13071bd1c35d3e214ddd64c59e2f553b2e1b6655ff11a98",
+          "bytes": 790,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/models.py",
+          "sha256": "36cdc432513e85f8e9a0b0cd2bb9555aec94ab716055f47e320dcf80dcea909e",
+          "bytes": 2883,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/retrieval.py",
+          "sha256": "76184ed4a4fe33896ac23f817bae50bdc50502b081149a8176b9c55359ffa0a5",
+          "bytes": 4973,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/static/app.js",
+          "sha256": "4d5b21b6f5fc0a76c2306709e82442572695a9fce5d5c68962bbec24db653d53",
+          "bytes": 30649,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/static/index.html",
+          "sha256": "197a9a752731fa8aaac5a06b46b008ecfa935f23b0a84932ef556098fbc12464",
+          "bytes": 378,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/static/styles.css",
+          "sha256": "091268dca19a929b64975047d5b0de1d6d97a61436ca3ae5684fc35cbd77eb6a",
+          "bytes": 18489,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/testdock_api.py",
+          "sha256": "cf2fe601ae52e7ad91096a7bb5eadb41f2d0150c91841532da8eac660419a60f",
+          "bytes": 9242,
+          "mode": "100644"
+        },
+        {
+          "path": "src/aiworkbench/worker.py",
+          "sha256": "5138e3e75ce20e4e44621b56177f12d0da6821fe5d7a47d0954178404d3ad535",
+          "bytes": 24224,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/conftest.py",
+          "sha256": "348a2ce449a1cd68a3553ebc7eaeb5dd64310dd377c0913f04a15fca8d45c9b5",
+          "bytes": 1270,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_access.py",
+          "sha256": "c0b7fef1253660cbcc8bdd36dd4e3b63d41291ad805fa72dc3bd2a57726601b2",
+          "bytes": 7096,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_bridge.py",
+          "sha256": "c131aa270c5182a6a992d37d5da67cf3287dda09f0a668da530118865dac7957",
+          "bytes": 8385,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_documents.py",
+          "sha256": "8b0af3024cc225419bc28fd8647f2edf76f758c55bf006ff00536c0c87627336",
+          "bytes": 4161,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_models.py",
+          "sha256": "4c5968e86b631cfa6e522e5790de39bf107523869d24e29e61a390b1fa4dbac2",
+          "bytes": 5427,
+          "mode": "100644"
+        }
+      ]
+    },
+    {
+      "name": "autotest-platform",
+      "version": "1.3.0",
+      "source_workspace_path": "projects/autotest-platform",
+      "source_commit": "17a498f95764aff020edd9b1c5fa2f1b1aad2c2d",
+      "source_branch": "main",
+      "source_dirty": true,
+      "file_count": 139,
+      "bytes": 3241543,
+      "files": [
+        {
+          "path": ".gitignore",
+          "sha256": "aaa238fa7d2b0bb372a771cc841712e468edb4b3060171994ec150920d5bcf35",
+          "bytes": 670,
+          "mode": "100644"
+        },
+        {
+          "path": "AGENTS.md",
+          "sha256": "c249333859427cadcc1f2f35739f84a7c9a408a33eff45399c6f31d548c455ff",
+          "bytes": 1070,
+          "mode": "100644"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "bd9b25ebb5a11a38ac82049af761ca8229be8ac173b891b614a3c5ae1f480ade",
+          "bytes": 1078,
+          "mode": "100644"
+        },
+        {
+          "path": "README.md",
+          "sha256": "adfe65fbe38ac567386d51a716ad1c99cc6ec2e566fe3d9aba859e18a8434e8c",
+          "bytes": 4222,
+          "mode": "100644"
+        },
+        {
+          "path": "THIRD_PARTY.md",
+          "sha256": "847cf06afe4f55227c9ca329bec809d40d778ea382e5778336b46a8795635390",
+          "bytes": 3887,
+          "mode": "100644"
+        },
+        {
+          "path": "config/ai-settings.example.json",
+          "sha256": "440e0e474b7f598c375c98e8882ed5f3d05a39a8a27dc8f981b95534928b4009",
+          "bytes": 212,
+          "mode": "100644"
+        },
+        {
+          "path": "config/settings.example.json",
+          "sha256": "949e84ab8f1a5101685fa231b99f004cf7a212808b2e23b32d497c009f51916a",
+          "bytes": 421,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/testdock-ai-worker.service",
+          "sha256": "0fd6c406d627306e05d88c5bcabe72bdd020577509d7bd1d629eb9a95fdffc61",
+          "bytes": 609,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/testdock-demo-dev.service",
+          "sha256": "83dbb7733138accdfbf50f17b25d8b0af48598e13dca0d6829e24e2f2364f2ae",
+          "bytes": 516,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/testdock-demo-test.service",
+          "sha256": "dfd5b196aaec0b16febdf8a1e0f0e840029c0f7e2ecd1cd87800e055e45253d7",
+          "bytes": 509,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/testdock-notifier.service",
+          "sha256": "d85e3b178ca5e4bf18b50117b2df4053d24adbb9724d122b3bc425d4863e8278",
+          "bytes": 558,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/testdock-worker.service",
+          "sha256": "b08e0f07f0ae9aa2bdebaf1f6025b792b131fe7196e505c6c3a358bb1b56d5a9",
+          "bytes": 559,
+          "mode": "100644"
+        },
+        {
+          "path": "deploy/testdock.service",
+          "sha256": "328418ccd5706a1c43c60610b22bb0fb1fcb817a195e8b2ee9022d12a8afc6d6",
+          "bytes": 586,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/Pygments-2.21.0/pygments-2.21.0.dist-info/licenses/AUTHORS",
+          "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f",
+          "bytes": 11048,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/Pygments-2.21.0/pygments-2.21.0.dist-info/licenses/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+          "bytes": 1331,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/annotated-doc-0.0.6/annotated_doc-0.0.6.dist-info/licenses/LICENSE",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+          "bytes": 1086,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/annotated-types-0.8.0/annotated_types-0.8.0.dist-info/licenses/LICENSE",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+          "bytes": 1083,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/anyio-4.16.0/anyio-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+          "bytes": 1081,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/certifi-2026.10.23/certifi-2026.10.23.dist-info/licenses/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "bytes": 989,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cffi-2.1.1/cffi-2.1.1.dist-info/licenses/LICENSE",
+          "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+          "bytes": 1123,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/chromium-headless-shell-1255.txt",
+          "sha256": "fe9fd59e07a27efa69c816d4726b68564df93cd4b666eb81ac75df9dd61e2f92",
+          "bytes": 2293456,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/click-8.5.1/click-8.5.1.dist-info/licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+          "bytes": 1475,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/croniter-6.2.4/croniter-6.2.4.dist-info/licenses/LICENSE",
+          "sha256": "a8f952e6c6bb30b0cfcf71c304e3931160d2a9b578d6eddfa5cc18c832e17ed3",
+          "bytes": 1064,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cryptography-50.0.2/cryptography-50.0.2.dist-info/licenses/LICENSE",
+          "sha256": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+          "bytes": 197,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cryptography-50.0.2/cryptography-50.0.2.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+          "bytes": 11360,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/cryptography-50.0.2/cryptography-50.0.2.dist-info/licenses/LICENSE.BSD",
+          "sha256": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+          "bytes": 1532,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/fastapi-0.163.0/fastapi-0.163.0.dist-info/licenses/LICENSE",
+          "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+          "bytes": 1086,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/greenlet-3.5.6/greenlet-3.5.6.dist-info/licenses/LICENSE",
+          "sha256": "769831d6e5dfaf2c20802faccff1fafb4c2025dd8f6253dfa47fcad59d4d0979",
+          "bytes": 1434,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/greenlet-3.5.6/greenlet-3.5.6.dist-info/licenses/LICENSE.PSF",
+          "sha256": "e5ff3c23c110e494cd7d736c10fd96d462457bafeca310840db6527298c7d46b",
+          "bytes": 2424,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/h11-0.16.0/h11-0.16.0.dist-info/licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+          "bytes": 1124,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/httpcore-1.0.9/httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+          "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+          "bytes": 1518,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/httpx-0.28.1/httpx-0.28.1.dist-info/licenses/LICENSE.md",
+          "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+          "bytes": 1508,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/idna-3.20/idna-3.20.dist-info/licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "bytes": 1541,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/iniconfig-2.3.1/iniconfig-2.3.1.dist-info/licenses/LICENSE",
+          "sha256": "3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4",
+          "bytes": 1098,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/inventory.json",
+          "sha256": "55b35e602fdb27f06583e678b1d3160dbdc48db16a171f02c13cc36c1d2f9eb5",
+          "bytes": 8590,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/jmespath-1.1.0/jmespath-1.1.0.dist-info/LICENSE",
+          "sha256": "6eefacfa4d71b82d08408c751470ac8d9854538da2142cb27be0287fb13d0ab9",
+          "bytes": 1113,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/libasound2t64-copyright",
+          "sha256": "9b356b4fae53b5d5e7668e048f085d68a5039de7b6afbf465f50e81513334062",
+          "bytes": 1591,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/noto-cjk-copyright",
+          "sha256": "849f4ea9c214fa4ac3593b770c699f387534b11ce671264c1b10d85bdcb5997b",
+          "bytes": 14712,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/opentelemetry-api-1.45.2/opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "bytes": 197,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/packaging-26.3/packaging-26.3.dist-info/licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "bytes": 1344,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/AUTHORS.txt",
+          "sha256": "f8998e1ed3151771c2fbc899ccf0e18b0817d425dff4983eb0fede4e48db47e4",
+          "bytes": 12239,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/LICENSE.txt",
+          "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+          "bytes": 1093,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+          "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+          "bytes": 558,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+          "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+          "bytes": 989,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+          "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+          "bytes": 14531,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+          "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+          "bytes": 11325,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+          "bytes": 1541,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+          "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+          "bytes": 614,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+          "bytes": 197,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          "bytes": 10174,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+          "bytes": 1344,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+          "bytes": 1023,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+          "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+          "bytes": 1089,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+          "bytes": 1331,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+          "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+          "bytes": 1081,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+          "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+          "bytes": 10142,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+          "bytes": 751,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+          "bytes": 1056,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+          "bytes": 1072,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+          "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+          "bytes": 1072,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+          "bytes": 1086,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pip-26.3/pip-26.3.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+          "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+          "bytes": 1093,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/playwright-1.65.2/playwright-1.65.2.dist-info/licenses/LICENSE",
+          "sha256": "7fab1461b41970ff376f1c9303a637076bfaaeb71cd12dd3a1c44aaf59a1a2b9",
+          "bytes": 11399,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/playwright-1.65.2/playwright/driver/LICENSE",
+          "sha256": "8e603aa87c70d36e497004f0dec63111511cb61b7d65ace12e10ea791599286c",
+          "bytes": 156386,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/playwright-1.65.2/playwright/driver/package/LICENSE",
+          "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+          "bytes": 11601,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/playwright-1.65.2/playwright/driver/package/NOTICE",
+          "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+          "bytes": 254,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/playwright-1.65.2/playwright/driver/package/ThirdPartyNotices.txt",
+          "sha256": "a549d329bad8806fe279f0ecae0fc0270dec7e7c2dc8ec10f90e394f7c32b144",
+          "bytes": 676,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pluggy-1.7.0/pluggy-1.7.0.dist-info/licenses/LICENSE",
+          "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606",
+          "bytes": 1110,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pycparser-3.12/pycparser-3.12.dist-info/licenses/LICENSE",
+          "sha256": "0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90",
+          "bytes": 1543,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pydantic-2.14.3/pydantic-2.14.3.dist-info/licenses/LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+          "bytes": 1129,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pydantic_core-2.50.4/pydantic_core-2.50.4.dist-info/licenses/LICENSE",
+          "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a",
+          "bytes": 1080,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/pytest-9.2.0/pytest-9.2.0.dist-info/licenses/LICENSE",
+          "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b",
+          "bytes": 1091,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/python-dateutil-4.0.0/python_dateutil-4.0.0.dist-info/licenses/AUTHORS.md",
+          "sha256": "56004c45a95e9ee5582ea60f9a7ee42179c8594c7b9c245bbfb4a3445b4af640",
+          "bytes": 7031,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/python-dateutil-4.0.0/python_dateutil-4.0.0.dist-info/licenses/LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e",
+          "bytes": 2889,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/python-multipart-0.0.33/python_multipart-0.0.33.dist-info/licenses/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/starlette-1.10.0/starlette-1.10.0.dist-info/licenses/LICENSE.md",
+          "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf",
+          "bytes": 1518,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/typing-inspection-0.4.5/typing_inspection-0.4.5.dist-info/licenses/LICENSE",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+          "bytes": 1090,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/typing_extensions-4.16.0/typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+          "bytes": 13936,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/tzdata-2026.6/tzdata-2026.6.dist-info/licenses/LICENSE",
+          "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46",
+          "bytes": 625,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/tzdata-2026.6/tzdata-2026.6.dist-info/licenses/licenses/LICENSE_APACHE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/licenses/uvicorn-0.54.0/uvicorn-0.54.0.dist-info/licenses/LICENSE.md",
+          "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371",
+          "bytes": 1526,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/业务接入手册.md",
+          "sha256": "b4fca7e5824d4e32415c3a031f0af21ceb48f22772eb95a3ffb51b7f2b4c1754",
+          "bytes": 5839,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/全局AI助手.md",
+          "sha256": "429ce24b47270cde57a8b0daa706ed6a82bda7402ab0fa02721e6f63f4dde4a8",
+          "bytes": 5572,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/开发计划书.md",
+          "sha256": "076115ebf56090d98c8a020eb3f7b0f5bc80ec02f4590cbe90ca970dddffd401",
+          "bytes": 8797,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/运行与维护.md",
+          "sha256": "4c3414d9e6b0298188640a98bfcef7f58c7150a946c2287e3319ea57a591a409",
+          "bytes": 15381,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/通知与每日任务.md",
+          "sha256": "f811745db7f4f41717c246c6c784367e478d9e7fd65ee9e39c4055e1eda7ae35",
+          "bytes": 5614,
+          "mode": "100644"
+        },
+        {
+          "path": "docs/验收记录.md",
+          "sha256": "fb9ffc33d5e5824e49847628390cb667ac7de50e08abca3ed50540f69ba7fcc8",
+          "bytes": 13363,
+          "mode": "100644"
+        },
+        {
+          "path": "examples/chemical-sales.json",
+          "sha256": "f38baae8a72fb156242f43ff6fe79a1519645287f49ebde92d2153e7bedcfe04",
+          "bytes": 10760,
+          "mode": "100644"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "ed0b90e4f0b75e1849d595cd7847c578bc2a265a4d5b6e1e9c1f8900744f7a8d",
+          "bytes": 396,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements.in",
+          "sha256": "7ff862604971947f10a503208316d33d47586bbbb380532980d8b36b0eb7cf96",
+          "bytes": 156,
+          "mode": "100644"
+        },
+        {
+          "path": "requirements.lock",
+          "sha256": "99507e6d5b74c9b49cb8949a96ec748e8f4eee6f841877677b54746c6bedaf28",
+          "bytes": 568,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/check_ai_gateway.py",
+          "sha256": "24570a34cc5bb63a09356be13eef72a4b2c4a3ea72a517c528bb1d94c1e355a2",
+          "bytes": 1121,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/ci_run.py",
+          "sha256": "54bb63aebbf0054b69e5cd707316f3c8c9f4688c40fc26b594b972c02b32186b",
+          "bytes": 2960,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/deploy.py",
+          "sha256": "9eb8550210d85f9645c9d4009ceb0caac9645f1f5d3aa11dfe1e718f0f8c442d",
+          "bytes": 4630,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/verify_backup.py",
+          "sha256": "5d10dcda15666bedce5657dade78c0d1bf33d21c51ee72e8c97495ddcb8fe7ce",
+          "bytes": 6092,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/verify_v12_deployment.py",
+          "sha256": "94652352296e9cddec022cc0cbf76b919a81894f4a386a6ed9fd6efb9baba40c",
+          "bytes": 4639,
+          "mode": "100644"
+        },
+        {
+          "path": "scripts/verify_v13_deployment.py",
+          "sha256": "30e3cf126ed00670089f337b229b57ff64307392a034aba977f3bb3f63d8917a",
+          "bytes": 4508,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/__init__.py",
+          "sha256": "2c493a7dcd843f2d9ea3e90b51a0191a2c08719c12496a35814284ad386dd285",
+          "bytes": 70,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_actions.py",
+          "sha256": "d7e5ba0a1b7edf511dfbaf63ff417c995079c2b129bd3003713a5682573aca5b",
+          "bytes": 7649,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_api.py",
+          "sha256": "414ae04242f76464a6b64e5f50145e04cef05a9aff0fbb4625e166f762580be8",
+          "bytes": 25308,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_bridge.py",
+          "sha256": "31c5ebc64dba0d91f288641d88aa88f386392e6a7015eeb0ad0f7624c1b02f21",
+          "bytes": 10625,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_gateway.py",
+          "sha256": "0f8009efa16264f131fd5cf62454c9baa7dc866ccd9e18315c3a557e89029a5a",
+          "bytes": 6302,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_runtime.py",
+          "sha256": "4e5de0c7e34f178d70e764183af00e5cbef46709a6bb7b757475cfaba0860d96",
+          "bytes": 26850,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_sources.py",
+          "sha256": "06c417c7f37c452516d81345a265c298071658527dde1c311d85f8f4e6d84917",
+          "bytes": 5658,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_store.py",
+          "sha256": "7f9b3c692af6790f973bcb960205456e6a8ea49ce1269121cf79bbeecf05215d",
+          "bytes": 4037,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/ai_worker.py",
+          "sha256": "42bdf75733a6d48f62f55812d12e6caad268af3dfcb2d262b63dfe31ad0b9e03",
+          "bytes": 909,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/app.py",
+          "sha256": "6a8a2dbd4f35e2a71353fc184a7ecf52232024e0fed94af017c791a265575040",
+          "bytes": 36661,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/cli.py",
+          "sha256": "559c54dc4584cd8d9fabca4329ea240a0e0043f4b7ed66e61c0b7e0f9ab1e056",
+          "bytes": 8867,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/core.py",
+          "sha256": "cfdc72a79e390c410ee65870e70feaf4210557a89ca9f474cb4be63b5856827c",
+          "bytes": 10244,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/demo.py",
+          "sha256": "5acb4dd27328d3143a1761395111bafa3c333b163125d86d00653a9ecb369660",
+          "bytes": 7206,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/engine.py",
+          "sha256": "52bafbf72329a199192949deaa14b3b0e804e539c3dfc01a3ee1aae4604071a6",
+          "bytes": 14629,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/execute.py",
+          "sha256": "87883de0641278f0cf93c87ca636eab394fc2687a992b1ec8dc98173f879433b",
+          "bytes": 879,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/migrations.py",
+          "sha256": "a565aa4b764f56b064e46b8e8626fcd0d620cfdb7a57dd05733069bdbf3be09c",
+          "bytes": 3391,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/models.py",
+          "sha256": "24c3ff34c7ee4d5d8b0cec523ac48084f31cb1d4a4f56c1c288b8a263b8eb396",
+          "bytes": 9187,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/notification_api.py",
+          "sha256": "7e6cd85f91473026954c5736c70b5526bfe35eaea13e49a9f95b25bf8b061780",
+          "bytes": 14328,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/notifications.py",
+          "sha256": "641241ec370501bc228de9781bf9002052d8cecd529fc6cae4fa2cc0b4cd03f9",
+          "bytes": 6021,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/notifier.py",
+          "sha256": "ce4596f55bdfc2f81f0431978fcda0dfad4b720d94c584cefdb47e3218638b1d",
+          "bytes": 9952,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/scheduling.py",
+          "sha256": "e886f91e7f3e7b6d1946e358bcc8fdcd34913e8e6f82698b7189e981856035a9",
+          "bytes": 3304,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/services.py",
+          "sha256": "99259e56d30606b4e49ac74a81f57b28cccd3a781c14fb9868d17bfdee209e4e",
+          "bytes": 3823,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/static/ai.css",
+          "sha256": "19d3fc5b30fb0b8d2bf692ab43996dbc5274cd10f2f3184b7499e7aebb795b6d",
+          "bytes": 5228,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/static/ai.js",
+          "sha256": "224a3d430fa7fda51cd99c3ab1afbd06a1efaa2a50506046e7b0105f0ad3d3d7",
+          "bytes": 19224,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/static/app.js",
+          "sha256": "c932b7e41d833c6e4bb8557fcc75be5d944f8472713f25f185ca0e709378687f",
+          "bytes": 68139,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/static/index.html",
+          "sha256": "0261ebc8398b239f9f4f151c9414efd0ab0cbd97dce5c6ee26ba5fa95330a78d",
+          "bytes": 735,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/static/logo.svg",
+          "sha256": "2f67e8c1aaf0ae8beb66d90203e1d3db932a99b8288f07b13ced91d5785f5ddc",
+          "bytes": 218,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/static/styles.css",
+          "sha256": "ea15eec3b8aa466b4a7dea7164a48f5573e098fc12f465f161b6f32966962c45",
+          "bytes": 16876,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/transfer.py",
+          "sha256": "fbd8a7392fe9dac8adc0d485616ee159b34176c8de96c62d01ea35358d7664ee",
+          "bytes": 11797,
+          "mode": "100644"
+        },
+        {
+          "path": "src/testdock/worker.py",
+          "sha256": "d4d536252e76e822b93cf53fbf32e562806631dbfddc5df208d46ac2be1d51c9",
+          "bytes": 6341,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/conftest.py",
+          "sha256": "8c3243edb9bcdc2c1af62cd361a05ae33444fb1610a5bc17e62a983d4733be36",
+          "bytes": 2643,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_ai.py",
+          "sha256": "fce09192c3d8d1296a26a1094bc237abe7a4816fcc56b776d13d664a2fe6742c",
+          "bytes": 25495,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_ai_gateway_contract.py",
+          "sha256": "c9d3b186c4cf95f2ae8f219afe5f5e76e4fec019467537e627500518ec00c757",
+          "bytes": 6150,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_ai_ui.py",
+          "sha256": "b2037cf15bda20a541b850dee39bb32e70f11a4778d1106405da4df25cb41295",
+          "bytes": 4266,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_delivery.py",
+          "sha256": "46f69b52a65dc63d7b4e29a9d0bfd41f567663fe30a7f5a2e336011f2451b999",
+          "bytes": 10575,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_delivery_ui.py",
+          "sha256": "fccb811767bae3659c8ccdae0ddaa9bf465a77364066ea55cf01b4165eb9a8b9",
+          "bytes": 4598,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_notifications.py",
+          "sha256": "9173e3e1da3d6c1a304740f38bd544be4bb510539bfeb562d1f220e38b413278",
+          "bytes": 14268,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_notifications_ui.py",
+          "sha256": "f4c8484046a2dff2e964177347e1ba10c6aa539224fa209ebd88bdb60ef71f6e",
+          "bytes": 4895,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_platform.py",
+          "sha256": "46727b1ab93e3f24015ee3df4050b33b296e4fcfb434e21eb7c5615c5a7198f6",
+          "bytes": 11699,
+          "mode": "100644"
+        },
+        {
+          "path": "tests/test_ui.py",
+          "sha256": "09776f055fd59dd7a506717acdd095780ed32014972d577eaab80e79b63c6030",
+          "bytes": 6567,
+          "mode": "100644"
+        }
+      ]
+    }
+  ]
+}

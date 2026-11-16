@@ -1,0 +1,19 @@
+{
+  "ocr/ch_ppocr_mobile_v2.0_cls_mobile.onnx": "e47acedf663230f8863ff1ab0e64dd2d82b838fceb5957146dab185a89d6215c",
+  "ocr/PP-OCRv6_rec_small.onnx": "6f327246b50388f3c176ae304bd95767ea6dc0c9ae92153ef8cbe210b3c14884",
+  "ocr/PP-OCRv6_det_small.onnx": "090f04abcd9d9a7498bc4ebf677e4cb9bdce1fe4197ddb7e529f1ef44e1ff94f",
+  "embeddings/CACHEDIR.TAG": "f6572428f6d5e1575e73a1502895a8731f10757dfbb634909c6e154b849af91d",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/files_metadata.json": "326c564db8eb647d0d95d663680398524332595bc609b04c7695677f6866c435",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/blobs/60938626ad1097a0c1a14be4f8340e32c714a056": "9088751d39abbf86ec3d19ffca92ad62ad19075f7e59712e6c71217fa125d1d3",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/blobs/cdb3043fc938fc918c06e66cf704c2ba58f88747": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/blobs/1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38": "1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/blobs/a8b3208c2884c4efb86e49300fdd3dc877220cdf": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/blobs/3a59388f0fd1bd22dec2ce7902c1be8e1fb84107": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/trees/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59.json": "c8fdaa22239c10b54c8766db68edf254f02a85a93c601a123a8d857d6071b51e",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/refs/main": "d96bbba2e83389b41a9df058631daa5a8b6f3fcb4444a1a8a4acfd063636f3db",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/snapshots/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59/model_optimized.onnx": "1294ea4b6331115a353d81f96b85e8c8d7fdcc284453d5b2fab5b016230aad38",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/snapshots/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59/tokenizer_config.json": "e6f3b96db926a37d4039995fbf5ad17de158dfb8f6343d607e4dbaad18d75f5a",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/snapshots/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59/config.json": "9088751d39abbf86ec3d19ffca92ad62ad19075f7e59712e6c71217fa125d1d3",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/snapshots/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59/tokenizer.json": "48cea5d44424912a6fd1ea647bf4fe50b55ab8b1e5879c3275f80e339e8fae26",
+  "embeddings/models--Qdrant--bge-small-zh-v1.5/snapshots/46fbe35fd4374a00fee7de77dfddaeb6dd6a2c59/special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3"
+}

@@ -1,0 +1,22 @@
+[Unit]
+Description=Independent AI Gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/nanshan/workspace/services/ai-gateway/app
+Environment=AI_GATEWAY_CONFIG=/home/nanshan/workspace/services/ai-gateway/config/settings.json
+Environment=PYTHONPATH=/home/nanshan/workspace/services/ai-gateway/app/src
+Environment=PYTHONDONTWRITEBYTECODE=1
+ExecStart=/home/nanshan/workspace/projects/ai-gateway/.venv/bin/python -m aigateway.cli serve
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=30
+UMask=0077
+MemoryMax=384M
+Nice=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,60 @@
+# 本机或编辑器临时内容
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+.cache/
+.runtime/
+tmp/
+logs/
+*.log
+
+# 真实配置与凭据；示例配置应提交
+.env
+.env.*
+*.env
+!.env.example
+!*.env.example
+secrets/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python 环境与可重建产物
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Node 依赖及常见构建目录
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.output/
+coverage/
+
+# 依赖清单、锁文件、源码、文档和测试夹具不作通用忽略
+
+# 汇总仓库中的本机配置和运行数据
+settings.json
+initial-admin.txt
+auth.json
+*.sqlite3
+*.sqlite3-*
+*.onnx
+*.safetensors
+*.npy
+/release.json

@@ -1,0 +1,18 @@
+[Unit]
+Description=TestDock notification outbox sender
+After=network.target
+
+[Service]
+WorkingDirectory=/home/nanshan/workspace/services/autotest-platform/app
+Environment=PYTHONPATH=/home/nanshan/workspace/services/autotest-platform/app/src
+Environment=TESTDOCK_CONFIG=/home/nanshan/workspace/services/autotest-platform/config/settings.json
+ExecStart=/home/nanshan/workspace/projects/autotest-platform/.venv/bin/python -m testdock.notifier
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=15
+UMask=0077
+MemoryMax=160M
+Nice=5
+
+[Install]
+WantedBy=default.target

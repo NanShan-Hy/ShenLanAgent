@@ -1,0 +1,13 @@
+{
+  "data_dir": "/home/nanshan/workspace/services/ai-gateway/data",
+  "key_file": "/home/nanshan/workspace/services/ai-gateway/config/master.key",
+  "bind": "127.0.0.1",
+  "port": 8094,
+  "public_url": "http://127.0.0.1:8094",
+  "max_concurrency": 10,
+  "max_users": 50,
+  "allow_private_upstreams": false,
+  "public_registration": false,
+  "min_free_bytes": 3221225472,
+  "account_pool_config": "/home/nanshan/workspace/services/gpt-account-pool/config/connector.json"
+}

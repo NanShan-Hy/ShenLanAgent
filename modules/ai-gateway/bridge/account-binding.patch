@@ -1,0 +1,61 @@
+--- a/sdk/api/handlers/handlers.go
++++ b/sdk/api/handlers/handlers.go
+@@ -315,6 +315,17 @@
+ 	if selectedCallback := selectedAuthIDCallbackFromContext(ctx); selectedCallback != nil {
+ 		meta[coreexecutor.SelectedAuthCallbackMetadataKey] = selectedCallback
+ 	}
++	// Gateway internal contract: this handler is behind native client-key authentication.
++	// Public gateway requests never forward these headers. SDK pinning is enforced
++	// before execution; the callback identifies the credential actually selected.
++	if ginCtx != nil && strings.TrimSpace(ginCtx.GetHeader("X-Gateway-Account-ID")) != "" {
++		pin := strings.TrimSpace(ginCtx.GetHeader("X-Gateway-Account-ID"))
++		meta[coreexecutor.PinnedAuthMetadataKey] = pin
++		meta[coreexecutor.SelectedAuthCallbackMetadataKey] = func(id string) {
++			ginCtx.Header("X-Gateway-Account-ID", id)
++			ginCtx.Header("X-Gateway-Pinning-Version", "1")
++		}
++	}
+ 	if finalizedFormatCallback := finalizedResponseFormatCallbackFromContext(ctx); finalizedFormatCallback != nil {
+ 		meta[coreexecutor.FinalizedResponseFormatCallbackMetadataKey] = finalizedFormatCallback
+ 	}
+--- a/internal/api/server_management_v8.go
++++ b/internal/api/server_management_v8.go
+@@ -44,6 +44,7 @@
+ 	v8.GET("/observability/requests/in-flight", s.mgmt.GetInFlightRequests)
+ 
+ 	v8.GET("/credentials", s.mgmt.ListAuthFiles)
++	v8.GET("/gateway-accounts", s.mgmt.GetGatewayAccounts)
+ 	v8.POST("/credentials", s.mgmt.UploadAuthFileV8)
+ 	v8.DELETE("/credentials", s.mgmt.DeleteAuthFileV8)
+ 	v8.GET("/credentials/models", s.mgmt.GetAuthFileModels)
+--- /dev/null
++++ b/internal/api/handlers/management/gateway_accounts.go
+@@ -0,0 +1,28 @@
++package management
++
++import (
++    "time"
++    "github.com/router-for-me/CLIProxyAPI/v8/internal/registry"
++    "github.com/gin-gonic/gin"
++)
++
++// GetGatewayAccounts exposes selection identifiers and readiness only. It is
++// behind the existing loopback-only management authentication, never client keys.
++func (h *Handler) GetGatewayAccounts(c *gin.Context) {
++    accounts := make([]gin.H, 0)
++    if h.authManager == nil { c.JSON(503, gin.H{"error":"manager_unavailable"}); return }
++    now := time.Now()
++    model := c.Query("model")
++    for _, a := range h.authManager.List() {
++        if model != "" && !registry.GetGlobalRegistry().ClientSupportsModel(a.ID, model) { continue }
++        unavailable := a.Unavailable && a.NextRetryAfter.After(now)
++        blocked := a.Quota.Exceeded && a.Quota.NextRecoverAt.After(now)
++        if ms := a.ModelStates[model]; ms != nil {
++            unavailable = unavailable || (ms.Unavailable && ms.NextRetryAfter.After(now))
++            blocked = blocked || (ms.Quota.Exceeded && ms.Quota.NextRecoverAt.After(now))
++        }
++        accounts = append(accounts, gin.H{"id":a.ID,"provider":a.Provider,"disabled":a.Disabled,
++            "unavailable":unavailable,"quota_blocked":blocked,"requires_sign_in":a.RequiresSignIn})
++    }
++    c.JSON(200, gin.H{"accounts":accounts,"contract":1})
++}

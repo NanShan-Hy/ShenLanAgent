@@ -1,0 +1,18 @@
+[Unit]
+Description=TestDock AI assistant queue
+After=network.target testdock.service ai-workbench.service
+
+[Service]
+WorkingDirectory=/home/nanshan/workspace/services/autotest-platform/app
+Environment=PYTHONPATH=/home/nanshan/workspace/services/autotest-platform/app/src
+Environment=TESTDOCK_CONFIG=/home/nanshan/workspace/services/autotest-platform/config/settings.json
+ExecStart=/home/nanshan/workspace/projects/autotest-platform/.venv/bin/python -m testdock.ai_worker
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=8
+MemoryMax=167772160
+UMask=0077
+KillMode=control-group
+
+[Install]
+WantedBy=default.target

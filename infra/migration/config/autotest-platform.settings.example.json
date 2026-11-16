@@ -1,0 +1,8 @@
+{
+  "data_dir": "/home/nanshan/workspace/services/autotest-platform/data",
+  "key_file": "/home/nanshan/workspace/services/autotest-platform/config/master.key",
+  "secure_cookie": false,
+  "run_timeout": 900,
+  "step_timeout": 15,
+  "browser_library_path": "/home/nanshan/workspace/tools/playwright-libs/1.2.11/usr/lib/x86_64-linux-gnu"
+}

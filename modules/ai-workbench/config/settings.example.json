@@ -1,0 +1,9 @@
+{
+  "data_dir":"/home/nanshan/workspace/data/ai-workbench/dev/data",
+  "key_file":"/home/nanshan/workspace/data/ai-workbench/dev/config/master.key",
+  "model_dir":"/home/nanshan/workspace/tools/ai-models",
+  "bridge_key_file":"/home/nanshan/workspace/data/ai-workbench/dev/config/testdock-bridge.key",
+  "testdock_url":"http://127.0.0.1:8088",
+  "daily_tokens":200000,
+  "min_free_bytes":3221225472
+}

@@ -1,0 +1,71 @@
+{
+  "config-version": 8,
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8095,
+    "max-request-body-bytes": 4194304,
+    "commercial-mode": true,
+    "trusted-proxies": [],
+    "shutdown-timeout": 20,
+    "response-compression": {
+      "enabled": false
+    },
+    "discovery": {
+      "enabled": false
+    },
+    "kv-store": {
+      "disabled": true
+    }
+  },
+  "management": {
+    "allow-remote": false,
+    "secret-key": "REPLACE_WITH_PRIVATE_MANAGEMENT_KEY",
+    "disable-control-panel": true,
+    "disable-auto-update-panel": true
+  },
+  "access": {
+    "api-keys": [
+      "REPLACE_WITH_PRIVATE_CLIENT_KEY"
+    ]
+  },
+  "oauth": {
+    "auth-dir": "/home/nanshan/workspace/services/gpt-account-pool/data/credentials",
+    "auth-auto-refresh-workers": 2
+  },
+  "routing": {
+    "strategy": "round-robin",
+    "session-affinity": true,
+    "session-affinity-rebind-on": "quota",
+    "session-affinity-ttl": "1h",
+    "retry": {
+      "request-retry": 0,
+      "max-retry-credentials": 1,
+      "max-retry-interval": 0
+    }
+  },
+  "requests": {
+    "streaming": {
+      "bootstrap-retries": 0,
+      "keepalive-seconds": 0
+    },
+    "proxy-url": "http://172.16.61.1:7890"
+  },
+  "observability": {
+    "logs": {
+      "debug": false,
+      "logging-to-file": false,
+      "request-log": false,
+      "logs-max-total-size-mb": 0,
+      "error-logs-max-files": 0
+    },
+    "usage": {
+      "usage-statistics-enabled": false
+    },
+    "pprof": {
+      "enable": false
+    }
+  },
+  "plugins": {
+    "enabled": false
+  }
+}

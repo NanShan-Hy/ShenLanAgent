@@ -1,0 +1,8 @@
+{
+  "version": "8.0.72",
+  "base_url": "http://127.0.0.1:8095/v1",
+  "client_key": "REPLACE_WITH_PRIVATE_VALUE",
+  "management_key": "REPLACE_WITH_PRIVATE_VALUE",
+  "pinning_supported": true,
+  "adapter_version": "8.0.72-gateway.2"
+}

@@ -1,0 +1,2 @@
+-r requirements.in
+croniter>=3,<7

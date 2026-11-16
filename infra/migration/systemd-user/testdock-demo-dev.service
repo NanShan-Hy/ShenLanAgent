@@ -1,0 +1,14 @@
+[Unit]
+Description=TestDock local development demo target
+After=network.target
+
+[Service]
+WorkingDirectory=/home/nanshan/workspace/services/autotest-platform/app
+Environment=PYTHONPATH=/home/nanshan/workspace/services/autotest-platform/app/src
+Environment=TESTDOCK_DEMO_LABEL=开发演示
+ExecStart=/home/nanshan/workspace/projects/autotest-platform/.venv/bin/python -m uvicorn testdock.demo:app --factory --host 127.0.0.1 --port 8091 --no-access-log
+Restart=on-failure
+UMask=0077
+
+[Install]
+WantedBy=default.target

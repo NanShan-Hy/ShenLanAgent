@@ -1,0 +1,97 @@
+{
+  "captured_at_utc": "2026-11-16T15:19:37.605268+00:00",
+  "scope": "Linux guest only; Mac/Fusion and external Oray control-plane settings are not accessible from this guest",
+  "systemd_user_units": [
+    "ai-gateway.service",
+    "ai-workbench-worker.service",
+    "ai-workbench.service",
+    "ai-workbench.slice",
+    "gpt-account-pool.service",
+    "testdock-ai-worker.service",
+    "testdock-demo-dev.service",
+    "testdock-demo-test.service",
+    "testdock-notifier.service",
+    "testdock-worker.service",
+    "testdock.service"
+  ],
+  "checks": {
+    "os": {
+      "exit_code": 0,
+      "stdout": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+      "stderr": ""
+    },
+    "kernel": {
+      "exit_code": 0,
+      "stdout": "6.8.0-149-generic\n",
+      "stderr": ""
+    },
+    "architecture": {
+      "exit_code": 0,
+      "stdout": "x86_64\n",
+      "stderr": ""
+    },
+    "storage": {
+      "exit_code": 0,
+      "stdout": "NAME                       SIZE TYPE FSTYPE      MOUNTPOINTS\nsda                         49G disk             \n├─sda1                       1G part vfat        /boot/efi\n├─sda2                       2G part ext4        /boot\n└─sda3                    45.9G part LVM2_member \n  └─ubuntu--vg-ubuntu--lv   23G lvm  ext4        /\nsr0                       1024M rom              \n",
+      "stderr": ""
+    },
+    "filesystem": {
+      "exit_code": 0,
+      "stdout": "Filesystem                        Type  Size  Used Avail Use% Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv ext4   23G   17G  5.0G  77% /\n",
+      "stderr": ""
+    },
+    "network": {
+      "exit_code": 0,
+      "stdout": "lo               UNKNOWN        127.0.0.1/8 ::1/128 \nens33            UP             172.16.61.128/24 metric 100 fe80::20c:29ff:fed0:70bf/64 \n",
+      "stderr": ""
+    },
+    "routes": {
+      "exit_code": 0,
+      "stdout": "default via 172.16.61.2 dev ens33 proto dhcp src 172.16.61.128 metric 100 \n172.16.61.0/24 dev ens33 proto kernel scope link src 172.16.61.128 metric 100 \n172.16.61.2 dev ens33 proto dhcp scope link src 172.16.61.128 metric 100 \n",
+      "stderr": ""
+    },
+    "linger": {
+      "exit_code": 0,
+      "stdout": "Linger=yes\n",
+      "stderr": ""
+    },
+    "failed_system": {
+      "exit_code": 0,
+      "stdout": "  UNIT LOAD ACTIVE SUB DESCRIPTION\n\n0 loaded units listed.\n",
+      "stderr": ""
+    },
+    "failed_user": {
+      "exit_code": 0,
+      "stdout": "  UNIT LOAD ACTIVE SUB DESCRIPTION\n\n0 loaded units listed.\n",
+      "stderr": ""
+    },
+    "ssh_socket": {
+      "exit_code": 0,
+      "stdout": "ActiveState=active\nUnitFileState=enabled\n",
+      "stderr": ""
+    },
+    "phddns_unit": {
+      "exit_code": 0,
+      "stdout": "ActiveState=inactive\nSubState=dead\n",
+      "stderr": ""
+    },
+    "trim": {
+      "exit_code": 0,
+      "stdout": "Result=success\nExecMainExitTimestamp=Mon 2026-11-16 00:07:50 UTC\nExecMainStatus=0\n",
+      "stderr": ""
+    }
+  },
+  "phddns_processes": "    PID    PPID COMMAND\n   3891       1 phdaemon\n   3898       1 phddns_mini_htt\n   3902       1 phtunnel\n",
+  "phddns_config": {
+    "path": "/etc/phtunnel.json",
+    "exists": true,
+    "contents_in_repository": false
+  },
+  "proxy": {
+    "interactive_shell_file": "~/.bashrc",
+    "http_proxy": "http://172.16.61.1:7890",
+    "https_proxy": "http://172.16.61.1:7890",
+    "account_pool_explicit_proxy": "http://172.16.61.1:7890",
+    "host_proxy_configuration": "not accessible from guest"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "captured_at_utc": "2026-11-16T15:19:37.602418+00:00",
+  "installers_not_in_repository": [
+    {
+      "workspace_path": "downloads/installers/pip/get-pip.py",
+      "bytes": 2397294,
+      "sha256": "356e0d0de21cdc348c3394084d90939b85e4246c4d14c76aee6ca4f46646ea98"
+    },
+    {
+      "workspace_path": "downloads/installers/ikuuuvpn/ikuuu_vpn-0.18.5-c2dadea4-linux-amd64.deb",
+      "bytes": 45358496,
+      "sha256": "6ec3b6aba12456857d01c984af6e9ef853eb0ef314f8d8269cac8f6a37b12d1c"
+    },
+    {
+      "workspace_path": "downloads/installers/phddns/phddns_5.3.0_amd64.deb",
+      "bytes": 269950,
+      "sha256": "4ea5f013f61aa79ef01c52225ff86c1b5b4cc338b069152766e4c6bbe30be58e"
+    },
+    {
+      "workspace_path": "downloads/installers/playwright-deps/fonts-noto-cjk_1%3a20230817+repack1-3_all.deb",
+      "bytes": 61229778,
+      "sha256": "7d64b985f6fe128c99eae5610d5c047338e572bdcfb2bb09736be01b824a7f6c"
+    },
+    {
+      "workspace_path": "downloads/installers/playwright-deps/libasound2t64_1.2.11-1ubuntu0.3_amd64.deb",
+      "bytes": 397772,
+      "sha256": "5d17bfb5683eb99f1be951fe48e1be5bf3c52391913b6b74a8aecf9b4f5e779f"
+    },
+    {
+      "workspace_path": "downloads/installers/cliproxyapi/8.0.72/CLIProxyAPI_8.0.72_linux_amd64_no-plugin.tar.gz",
+      "bytes": 25742552,
+      "sha256": "12ff0146cc2f0b663088d7a8b597cef1b96767e7ac6c8844e3cd21669c2693c3"
+    },
+    {
+      "workspace_path": "downloads/installers/cliproxyapi/8.0.72/e96d4c4818851cf0e96d27b2bc8b67379e449d9e-source.tar.gz",
+      "bytes": 9730691,
+      "sha256": "21ab830fea73afd9a462ef85f4c71ca0e971c6db5cee49f52521de47add4449a"
+    },
+    {
+      "workspace_path": "downloads/installers/nginx/1.24.0-2ubuntu7.19/nginx_1.24.0-2ubuntu7.19_amd64.deb",
+      "bytes": 524926,
+      "sha256": "b9c3476a504c963d8c3cab6540127fa4100ccf6ddf8ee978780bb32f128968d5"
+    },
+    {
+      "workspace_path": "downloads/installers/go/1.26.10/go1.26.10.linux-amd64.tar.gz",
+      "bytes": 66936659,
+      "sha256": "ccfe7ae822d2c2f41f4fe7c956199967a4dac22d0ee0d2b2bfdb440aab3b20c5"
+    }
+  ],
+  "account_pool_adapter": {
+    "version": "8.0.72-gateway.2",
+    "upstream_commit": "e96d4c4818851cf0e96d27b2bc8b67379e449d9e",
+    "source_sha256": "21ab830fea73afd9a462ef85f4c71ca0e971c6db5cee49f52521de47add4449a",
+    "patch_sha256": "e21a7cd4249065dd31550245a3e3dadc5105ff9257200955ef10b7699990c5f9",
+    "binary_sha256": "597d93df32988af9b0b12ed90691e58fa67f2a33cac4047cb7835e8cd0c5527f",
+    "go_version": "1.26.10",
+    "cgo": false,
+    "pinning_contract": 1
+  }
+}

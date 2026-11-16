@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "base_url": "http://127.0.0.1:8094/v1",
+  "api_key": "",
+  "model": "",
+  "vision_models": [],
+  "workbench_url": "http://127.0.0.1:8090",
+  "max_output_tokens": 4096,
+  "max_rounds": 8
+}

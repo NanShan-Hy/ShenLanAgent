@@ -1,0 +1,427 @@
+{
+  "format": "testdock-assets-v1",
+  "cases": [
+    {
+      "name": "API · 商品报价与订单校验",
+      "description": "",
+      "tags": [
+        "sales",
+        "api",
+        "smoke"
+      ],
+      "steps": [
+        {
+          "action": "http",
+          "name": "登录销售系统",
+          "locator_type": "css",
+          "locator": "",
+          "value": "",
+          "url": "/api/session",
+          "method": "POST",
+          "headers": {},
+          "query": {},
+          "body": {
+            "username": "{{username}}",
+            "password": "{{password}}"
+          },
+          "body_type": "json",
+          "assertions": [
+            {
+              "source": "status",
+              "expression": "",
+              "operator": "eq",
+              "expected": 200
+            }
+          ],
+          "extract": [
+            {
+              "name": "session_token",
+              "source": "json",
+              "expression": "token",
+              "secret": true
+            }
+          ],
+          "timeout": 15
+        },
+        {
+          "action": "http",
+          "name": "查询商品并提取SKU",
+          "locator_type": "css",
+          "locator": "",
+          "value": "",
+          "url": "/api/products",
+          "method": "GET",
+          "headers": {
+            "Authorization": "Bearer {{session_token}}"
+          },
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [
+            {
+              "source": "status",
+              "expression": "",
+              "operator": "eq",
+              "expected": 200
+            },
+            {
+              "source": "json",
+              "expression": "environment",
+              "operator": "eq",
+              "expected": "{{environment}}"
+            }
+          ],
+          "extract": [
+            {
+              "name": "sku",
+              "source": "json",
+              "expression": "items[0].sku",
+              "secret": false
+            }
+          ],
+          "timeout": 15
+        },
+        {
+          "action": "http",
+          "name": "根据商品与数量计算报价",
+          "locator_type": "css",
+          "locator": "",
+          "value": "",
+          "url": "/api/quotes",
+          "method": "POST",
+          "headers": {
+            "Authorization": "Bearer {{session_token}}"
+          },
+          "query": {},
+          "body": {
+            "sku": "{{sku}}",
+            "quantity": "{{quantity}}"
+          },
+          "body_type": "json",
+          "assertions": [
+            {
+              "source": "status",
+              "expression": "",
+              "operator": "eq",
+              "expected": 201
+            },
+            {
+              "source": "json",
+              "expression": "total_cents",
+              "operator": "eq",
+              "expected": "{{expected_total_cents}}"
+            }
+          ],
+          "extract": [
+            {
+              "name": "quote_id",
+              "source": "json",
+              "expression": "id",
+              "secret": false
+            }
+          ],
+          "timeout": 15
+        },
+        {
+          "action": "http",
+          "name": "按报价提交订单",
+          "locator_type": "css",
+          "locator": "",
+          "value": "",
+          "url": "/api/orders",
+          "method": "POST",
+          "headers": {
+            "Authorization": "Bearer {{session_token}}"
+          },
+          "query": {},
+          "body": {
+            "quote_id": "{{quote_id}}",
+            "customer": "{{customer}}"
+          },
+          "body_type": "json",
+          "assertions": [
+            {
+              "source": "status",
+              "expression": "",
+              "operator": "eq",
+              "expected": 201
+            }
+          ],
+          "extract": [
+            {
+              "name": "order_id",
+              "source": "json",
+              "expression": "id",
+              "secret": false
+            }
+          ],
+          "timeout": 15
+        },
+        {
+          "action": "http",
+          "name": "验证订单与报价一致",
+          "locator_type": "css",
+          "locator": "",
+          "value": "",
+          "url": "/api/orders/{{order_id}}",
+          "method": "GET",
+          "headers": {
+            "Authorization": "Bearer {{session_token}}"
+          },
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [
+            {
+              "source": "status",
+              "expression": "",
+              "operator": "eq",
+              "expected": 200
+            },
+            {
+              "source": "json",
+              "expression": "status",
+              "operator": "eq",
+              "expected": "待审核"
+            },
+            {
+              "source": "json",
+              "expression": "quote_id",
+              "operator": "eq",
+              "expected": "{{quote_id}}"
+            },
+            {
+              "source": "json",
+              "expression": "total_cents",
+              "operator": "eq",
+              "expected": "{{expected_total_cents}}"
+            }
+          ],
+          "extract": [],
+          "timeout": 15
+        }
+      ],
+      "key": "sales-api"
+    },
+    {
+      "name": "Web · 从采购报价到提交订单",
+      "description": "",
+      "tags": [
+        "sales",
+        "web",
+        "smoke"
+      ],
+      "steps": [
+        {
+          "action": "goto",
+          "name": "",
+          "locator_type": "css",
+          "locator": "",
+          "value": "",
+          "url": "/sales",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "fill",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "username",
+          "value": "{{username}}",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "fill",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "password",
+          "value": "{{password}}",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "click",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "login",
+          "value": "",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "assert_text",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "welcome",
+          "value": "{{greeting}}",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "fill",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "quantity",
+          "value": "{{quantity}}",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "click",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "quote",
+          "value": "",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "assert_text",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "quote-total",
+          "value": "13.80",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "click",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "order",
+          "value": "",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        },
+        {
+          "action": "assert_text",
+          "name": "",
+          "locator_type": "testid",
+          "locator": "order-status",
+          "value": "待审核",
+          "url": "",
+          "method": "GET",
+          "headers": {},
+          "query": {},
+          "body": null,
+          "body_type": "json",
+          "assertions": [],
+          "extract": [],
+          "timeout": 15
+        }
+      ],
+      "key": "sales-web"
+    }
+  ],
+  "suites": [
+    {
+      "name": "销售核心流程回归",
+      "description": "通用销售链路示例：商品→报价→订单，环境可复用。",
+      "case_ids": [
+        "sales-api",
+        "sales-web"
+      ]
+    }
+  ],
+  "environments": [
+    {
+      "name": "开发演示",
+      "web_base_url": "http://127.0.0.1:8091",
+      "api_base_url": "http://127.0.0.1:8091",
+      "variables": {
+        "username": "tester",
+        "quantity": 2,
+        "expected_total_cents": 1380,
+        "customer": "自动化测试客户",
+        "environment": "开发演示",
+        "greeting": "开发演示，欢迎 tester"
+      },
+      "secrets": {},
+      "remove_secrets": [],
+      "secret_keys": [
+        "password"
+      ]
+    },
+    {
+      "name": "测试演示",
+      "web_base_url": "http://127.0.0.1:8092",
+      "api_base_url": "http://127.0.0.1:8092",
+      "variables": {
+        "username": "tester",
+        "quantity": 2,
+        "expected_total_cents": 1380,
+        "customer": "自动化测试客户",
+        "environment": "测试演示",
+        "greeting": "测试演示，欢迎 tester"
+      },
+      "secrets": {},
+      "remove_secrets": [],
+      "secret_keys": [
+        "password"
+      ]
+    }
+  ]
+}
